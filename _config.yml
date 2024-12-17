@@ -8,7 +8,7 @@ favicon: /img/avatar.jpg
 # Ex: if the access URL is exemple.com/blog, you need to set blog_path: /blog
 blog_path: /
 
-# Socials
+# Social
 link:
   theme: color  # Link style, color: colored icons, white: black and white icons
   items:
@@ -20,7 +20,7 @@ link:
     instagram:
     reddit:
 
-##########Multi-Author Mode ############
+########## Multi-Author Mode ############
 author:
   on: false
   authors:
@@ -78,139 +78,130 @@ menu:
 # aticle Disclaimer
 article_txt: Please credit the source when reposting. Feel free to verify the references in the article, and point out any errors or unclear expressions. You can comment in the section below or email jaytp@qq.com.
 
+# copyright 
 bottom_text: ©2016-2020 Yelog
-# 自定义页面最下方的站点版权信息
-# 如果不填，则自定义为 ©2017 author (这个author为hexo根目录_config.yml中配置的)
+#  If left blank, it defaults to ©2017 author (where 'author' is configured in the Hexo root _config.yml file).
 
-# 底部备案号
-miit:
-  on: false
-  info: 京ICP证030173号
-  url: http://beian.miit.gov.cn/ # 默认链接为 http://beian.miit.gov.cn/
-
-
-reward: true
-# true 开启打赏功能
+# donation feature
+reward: false
 
 searchAll: false
-# true 启用全文搜索
-# 开启此功能需要下面操作：
-# 1. 在 hexo 根目录 执行 npm install hexo-generator-search --save 安装插件
-# 2. 在 hexo 根目录的 _config.xml 中添加下面内容
-# search:
-#   path: search.xml
-#   field: post
-
+# true enables full-text search
+# To enable this feature, follow these steps:
+# 1. Run npm install hexo-generator-search --save in the Hexo root directory to install the plugin.
+# 2. Add the following configuration to _config.yml in the Hexo root directory:
 
 copyright: false
-# Copyright info. of post | 文末版权信息
 
 word_count: false
-# true 开启字数统计
-# 开启此功能需要安装插件 ：在 hexo根目录 执行npm i hexo-wordcount --save
+# To enable this feature, install the plugin: Run npm i hexo-wordcount --save in the Hexo root directory.
 
-
-# 不蒜子网站计数设置
-# http://ibruce.info/2015/04/04/busuanzi/
+# Busuanzi Website Counter Settings : http://ibruce.info/2015/04/04/busuanzi/
 visit_counter:
-  on: true
-  site_visit: true
-  page_visit: true
+  on: truefalse
+  site_visit: false
+  page_visit: false
 
-##########自定义样式设置##############
-# Table of contents | 文章目录
+########## Custom Style Settings ##############
+
+# Table of Contents | Article TOC
 toc:
-  max_depth: 3  # 1 - 6 (h1-h6) 目录最大级数
+  max_depth: 3  # Maximum heading levels in the TOC (1 - 6 for h1 - h6)
 
-#文章列表 鼠标移上去的样式, 为空时使用默认效果
+# Article List - Hover Style  
+# If left empty, the default effect will be applied.
 article_list:
-  title: '#383636' # 文章列表标题颜色
-  datetime: '#5e5e5f' # 文章发布日期颜色
+  title: '#383636'  # Article list title color
+  datetime: '#5e5e5f'  # Article publication date color
   hover:
-    background: '#e2e0e0'  # 背景色:提供几种：'#c1bfc1'  '#fbf4a8'
-    color:     # 文字颜色 提供几种：'#ffffff'
-# 注意：由于颜色如果包含#，使用单引号 ' 引起来
+    background: '#e2e0e0'  # Background color; examples: '#c1bfc1', '#fbf4a8'
+    color:     # Text color; examples: '#ffffff'
+# Note: If the color contains '#', enclose it in single quotes ' '.
 
-# 文章列表背景图
+
+# Article List Background Image
 article_bg_img:
-  on: false # 是否开启
-  src: https://i.loli.net/2019/07/22/5d3521411f3f169375.png
-  opacity: 0.3 # 背景图透明度，范围 0 ～ 1
+  on: false  # Whether to enable
+  src: https://i.loli.net/2019/07/22/5d3521411f3f169375.png  # Background image URL
+  opacity: 0.3  # Background image opacity, range 0 to 1
 
-# 列表样式
-list: normal
-# normal : 普通样式
-# thread : 列表外圈有一个线框
 
-# 引用块样式
-blockquote: github
-# github : 类似于github的引用快
-# bracket : 类似于左右两个大括号的样式
+# List Style
+list: normal  
+# normal: Standard style  
+# thread: List with a border around it  
 
-# table 的样式
-table: green_title
-# 为空时类似github的table样式
-# green 绿色样式
-# green_title 头部为青色的table样式
+# Blockquote Style
+blockquote: github  
+# github: Similar to GitHub's blockquote style  
+# bracket: Similar to the style with large brackets on both sides  
 
-# 首页背景图
-index_bg_img:
-# 其他页面背景图
-other_bg_img:
+# Table Style
+table: green_title  
+# If empty, it will resemble GitHub's table style  
+# green: Green style  
+# green_title: Table with cyan-colored headers  
 
-# 点击图片放大样式
-img_resize: default
-# 可选值：
-# default: 默认(自己写的简单的放大)
-# photoSwipe: 使用photoSwipe插件
+# Homepage Background Image
+index_bg_img:  
 
-# 代码段高亮样式，markdown 语法 `demo`
+# Other Page Background Image
+other_bg_img:  
+
+# Image Click-to-Resize Style
+img_resize: default  
+# Available values:  
+# default: Default (simple enlargement script)  
+# photoSwipe: Use the photoSwipe plugin
+
+
+# Code Block Highlight Style, Markdown Syntax `demo`
 code:
-  theme: dark-red
-# 支持主题：
-# dark-red: 红字(默认)
-# github: github样式（灰色底，黑字）
+  theme: dark-red  # Supported themes:  
+  # dark-red: Red text (default)  
+  # github: GitHub style (gray background, black text)
 
 highlight:
-  on: true # true开启代码高亮，开启需要关闭博客 _config.yml 中的 highlight
-  lineNum: false # true显示行号
-  copy: true # 复制功能
-  theme: atom-light
-# 代码高亮主题,效果可以查看 https://highlightjs.org/static/demo/
-# 支持主题：
-# sublime : 参考sublime的高亮主题
-# darcula : 参考idea中的darcula的主题
-# atom-dark : 参考Atom的dark主题
-# atom-light : 参考Atom的light主题
-# github : 参考GitHub版的高亮主题
-# github-gist : GitHub-Gist主题
-# brown-paper : 牛皮纸效果
-# gruvbox-light : gruvbox的light主题
-# gruvbox-dark ： gruvbox的dark主题
-# rainbow :
-# railscasts :
-# sunburst :
-# kimbie-dark :
-# kimbie-light :
-# school-book : 纸张效果
-# zenbum : oschina 也选择此高亮主题
+  on: true  # true enables code highlighting, but requires disabling highlight in the blog's _config.yml  
+  lineNum: false  # true shows line numbers  
+  copy: true  # Copy function enabled  
+  theme: atom-light  # Code highlight theme, you can preview it at https://highlightjs.org/static/demo/  
+  # Supported themes:  
+  # sublime: Sublime-style highlight  
+  # darcula: Dark theme from IDEA  
+  # atom-dark: Atom's dark theme  
+  # atom-light: Atom's light theme  
+  # github: GitHub-style highlight  
+  # github-gist: GitHub Gist theme  
+  # brown-paper: Brown paper effect  
+  # gruvbox-light: Gruvbox light theme  
+  # gruvbox-dark: Gruvbox dark theme  
+  # rainbow:  
+  # railscasts:  
+  # sunburst:  
+  # kimbie-dark:  
+  # kimbie-light:  
+  # school-book: Paper effect  
+  # zenbum: OSChina uses this highlight theme
 
-# MathJax 数学公式支持
+
+# MathJax Math Formula Support
 mathjax:
-  on: true #是否启用
-  per_page: false # 若只渲染单个页面，此选项设为false，页面内加入 mathjax: true
+  on: true  # Whether to enable MathJax
+  per_page: false  # If rendering only a single page, set this to false, and include mathjax: true in the page
 
-# Mermaid 支持
+# Mermaid Support
 mermaid:
-  on: false
-  cdn: //cdn.jsdelivr.net/npm/mermaid@8.4.2/dist/mermaid.min.js
-  #cdn: //cdnjs.cloudflare.com/ajax/libs/mermaid/8.3.1/mermaid.min.js
-  options: # 更多配置信息可以参考 https://mermaidjs.github.io/#/mermaidAPI
-    theme: 'default'
-    startOnLoad: true
+  on: false  # Whether to enable Mermaid
+  cdn: //cdn.jsdelivr.net/npm/mermaid@8.4.2/dist/mermaid.min.js  # CDN link for Mermaid
+  # cdn: //cdnjs.cloudflare.com/ajax/libs/mermaid/8.3.1/mermaid.min.js  # Alternative CDN
+  options:  # More configuration details can be found at https://mermaidjs.github.io/#/mermaidAPI
+    theme: 'default'  # Theme for Mermaid diagrams
+    startOnLoad: true  # Start rendering when the page loads
     flowchart:
-      useMaxWidth: false
-      htmlLabels: true
+      useMaxWidth: false  # Whether to use the maximum width for flowchart
+      htmlLabels: true  # Whether to use HTML labels in flowchart
+
 
 ##############################
 
@@ -218,81 +209,81 @@ mermaid:
 friends:
   叶落阁: http://yelog.org/
 
-##########评论设置#############
+########## Comment Settings #############
 comment:
-  on: false
-  type: gitalk  # 评论系统：gitalk、disqus、gitment、utteranc、livere、giscus,注意：使用时，在下方对应位置进行配置
-  comment_count: true  # 文章标题下方显示评论数 目前仅支持 gitalk 和 disqus
-  ## 使用说明 https://yelog.org//2020/05/23/3-hexo-comment/
-# 各评论系统配置 ↓↓
+  on: false  # Whether to enable comments
+  type: gitalk  # Comment system: gitalk, disqus, gitment, utteranc, livere, giscus. Note: configure the corresponding system below.
+  comment_count: true  # Show comment count below the article title. Currently supports only gitalk and disqus.
+  ## Usage instructions: https://yelog.org//2020/05/23/3-hexo-comment/
+# Configuration for each comment system ↓↓
 
 disqus:
-  shortname:
-  # disqus评论系统， 2016年9月被GFW认证，大陆不能使用。
-  # 获取shortname：https://help.disqus.com/customer/en/portal/articles/466208-what-s-a-shortname-
-
+  shortname:  # Disqus comment system, GFW-certified in September 2016, not accessible in mainland China.
+  # Get shortname: https://help.disqus.com/customer/en/portal/articles/466208-what-s-a-shortname-
 
 gitalk:
-  githubID: yelog
-  repo: yelog.github.io
-  ClientID:
-  ClientSecret:
-  adminUser: yelog
-  distractionFreeMode: true
-  language: zh-CN
-  perPage: 10
-# gitalk：利用github issue制作的第三方聊天插件
+  githubID: yelog  # GitHub username
+  repo: yelog.github.io  # Repository to use for GitHub issues
+  ClientID:  # GitHub OAuth application Client ID
+  ClientSecret:  # GitHub OAuth application Client Secret
+  adminUser: yelog  # Admin user, must be a collaborator with write access to the above repository
+  distractionFreeMode: true  # Full-screen distraction-free mode
+  language: zh-CN  # Language: Supported options are en, zh-CN, zh-TW
+  perPage: 10  # Number of comments per page (default is 10, maximum is 100)
+# gitalk: A third-party chat plugin built using GitHub Issues
 # https://github.com/gitalk/gitalk
-# 参数介绍：
-# githubID: github用户名
-# repo: 使用哪个仓库的issue
-# ClientID 和 ClientSecret 创建 OAuth application 就会生成：https://github.com/settings/applications/new
-# adminUser: 必须为上面仓库的合作者（有写入权限），使用自己的 github 用户名即可
-# distractionFreeMode: 全屏遮罩效果
-# language: 语言：支持：en / zh-CN / zh-TW 三种
-# perPage: 每次加载的数据大小，默认10，最大100
+# Parameter description:
+# githubID: GitHub username
+# repo: Repository to use for GitHub Issues
+# ClientID and ClientSecret are obtained by creating an OAuth application: https://github.com/settings/applications/new
+# adminUser: Must be a collaborator with write access to the repository (use your GitHub username)
+# distractionFreeMode: Fullscreen mode for distraction-free reading
+# language: Supported languages: en, zh-CN, zh-TW
+# perPage: Number of comments per page (default is 10, maximum is 100)
+
 
 
 gitment:
-  owner: yelog
-  repo: yelog.github.io
-  client_id:
-  client_secret:
-  # gitment : 通过github issue实现的评论系统
-  # 开源地址 : https://github.com/imsun/gitment
-  # 使用说明 :
+  owner: yelog  # GitHub repository owner
+  repo: yelog.github.io  # Repository for GitHub issues
+  client_id:  # GitHub OAuth application Client ID
+  client_secret:  # GitHub OAuth application Client Secret
+  # gitment: A comment system built using GitHub Issues
+  # Open-source repository: https://github.com/imsun/gitment
+  # Usage instructions: 
 
 livere:
-  data_uid:
-  # 来必力: http://livere.com/
-  # 使用说明 : https://yelog.org//2020/05/23/3-hexo-comment/
+  data_uid:  # Livere comment system user ID
+  # Livere: http://livere.com/
+  # Usage instructions: https://yelog.org//2020/05/23/3-hexo-comment/
 
 utteranc:
-  repo: xxx/xxx.github.io # 承载评论的仓库，填上自己新建的仓库
-  issue_term: pathname    # Issue 与 博客文章 之间映射关系
-  label: utteranc         # 创建的 Issue 添加的标签
-  theme: github-light     # 主题，可选主题请查看官方文档 https://utteranc.es/#heading-theme
-# 官方文档 https://utteranc.es/
-# 使用说明 https://yelog.org//2020/05/23/3-hexo-comment/
+  repo: xxx/xxx.github.io  # Repository for hosting comments, use your own newly created repository
+  issue_term: pathname  # Mapping between Issue and blog articles
+  label: utteranc  # Label for the created Issue
+  theme: github-light  # Theme, check official documentation for other options: https://utteranc.es/#heading-theme
+# Official documentation: https://utteranc.es/
+# Usage instructions: https://yelog.org//2020/05/23/3-hexo-comment/
 
 giscus:
-  repo: xxx/xxx             # 用于承载评论的仓库
-  repoId: xxx               # 仓库ID,从giscus网站获取
-  category: General         # Discussion主题分类
-  categoryId: x             # 分类ID,从giscus网站获取
-  mapping: pathname         # Github讨论与博客文章之间的映射关系, pathname url title og:title
-  strict: 0                 # 是否使用严格的标题匹配, 0 1
-  reactionsEnabled: 1       # 是否使用Github讨论的Reactions, 0 1
-  emitMetadata: 1           # 是否输出Github讨论的元数据, 0 1
-  inputPosition: top        # 输入框位置, top bottom
-  theme: light              # 主题, 支持的主题请查看giscus网站
-  lang: zh-CN               # 主题语言,支持的语言请查看giscus网站
-  loading: lazy             # 是否启用懒加载
-  # 官方文档: https://giscus.app/
+  repo: xxx/xxx  # Repository used to host comments
+  repoId: xxx  # Repository ID, obtained from the Giscus website
+  category: General  # Discussion category
+  categoryId: x  # Category ID, obtained from the Giscus website
+  mapping: pathname  # Mapping between GitHub discussion and blog articles, options: pathname, url, title, og:title
+  strict: 0  # Whether to use strict title matching, options: 0 (no), 1 (yes)
+  reactionsEnabled: 1  # Whether to enable GitHub discussion Reactions, options: 0 (no), 1 (yes)
+  emitMetadata: 1  # Whether to output GitHub discussion metadata, options: 0 (no), 1 (yes)
+  inputPosition: top  # Position of the input box, options: top, bottom
+  theme: light  # Theme, check the Giscus website for supported themes
+  lang: zh-CN  # Theme language, check the Giscus website for supported languages
+  loading: lazy  # Whether to enable lazy loading
+  # Official documentation: https://giscus.app/
+
 
 ##############################
 
-##########CND设置#############
+########## CDN Settings #############
 CDN:
   jquery: //cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js
   jquery_cookie: //cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js
